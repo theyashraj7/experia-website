@@ -1,0 +1,146 @@
+{
+  "theme": {
+    "default": "light",
+    "supported": ["light", "dark"],
+    "description": "Premium, curiosity-driven editorial style. Light mode is warm and tactile. Dark mode is deep, cinematic, and deliberate."
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Playfair Display",
+      "body": "Manrope",
+      "display": "Instrument Serif",
+      "accent": "Cabinet Grotesk"
+    },
+    "scale": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tighter leading-[0.9]",
+      "h2": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h3": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight",
+      "h4": "text-xl sm:text-2xl font-medium tracking-tight",
+      "body": "text-base sm:text-lg leading-relaxed",
+      "overline": "text-xs sm:text-sm uppercase tracking-[0.2em] font-medium"
+    },
+    "pairing_rules": "Use Playfair Display or Instrument Serif for editorial impact (hero, quotes). Use Manrope for high-legibility body text and data points. Never use Inter or Roboto."
+  },
+  "colors": {
+    "light": {
+      "background": "#F9F9F8",
+      "surface": "#EFEFEA",
+      "surface_glass": "rgba(255, 255, 255, 0.7)",
+      "text_primary": "#0A0A0A",
+      "text_secondary": "#52525B",
+      "accent": "#4B3D8F",
+      "accent_foreground": "#FFFFFF",
+      "live_red": "#E03131",
+      "border": "#E5E5E0"
+    },
+    "dark": {
+      "background": "#0D0E15",
+      "surface": "#1A1C29",
+      "surface_glass": "rgba(13, 14, 21, 0.7)",
+      "text_primary": "#F4F4F5",
+      "text_secondary": "#A1A1AA",
+      "accent": "#818CF8",
+      "accent_foreground": "#000000",
+      "live_red": "#FF4D4F",
+      "border": "#27272A"
+    },
+    "rules": "Avoid generic gradients. Color exists to direct emotion and action. Use Tinted Grays instead of pure #000000 or #FFFFFF. Restrained indigo/violet for brand essence, restrained live-red for 'Live Now' signaling."
+  },
+  "visual_enhancers": {
+    "borders": "1px solid, low opacity. Avoid chunky borders. Prefer subtle inner strokes on glass surfaces.",
+    "shadows": {
+      "sm": "0 2px 8px rgba(0,0,0,0.04)",
+      "md": "0 8px 24px rgba(0,0,0,0.06)",
+      "lg": "0 16px 48px rgba(0,0,0,0.08)",
+      "dark_sm": "0 2px 8px rgba(0,0,0,0.2)",
+      "dark_md": "0 8px 24px rgba(0,0,0,0.4)"
+    },
+    "textures": "Incorporate subtle SVG noise/grain overlays over hero sections and dark mode surfaces to remove the 'digital flatness'.",
+    "glassmorphism": "backdrop-blur-xl or 2xl. MUST include 1px delicate inner stroke (border-white/20 in light, border-white/10 in dark). Never use completely transparent backgrounds without blur."
+  },
+  "layouts": {
+    "hero": "Asymmetrical kinetic hero. Large serif typography with line-by-line masked reveals using framer-motion. Avoid standard two-column split.",
+    "bento_grid": "Grid structure (grid-cols-1 md:grid-cols-8 lg:grid-cols-12) with wide gaps (gap-8). Never fill 100% perfectly; leave empty cells for tension.",
+    "spacing": "Generous spacing. Use p-12 to p-24 for padding inside major sections. h-screen or min-h-[80vh] for hero blocks.",
+    "containers": "Sections should mix full-bleed and constrained (max-w-7xl) wrappers. Use optical alignment."
+  },
+  "motion": {
+    "scroll": "MANDATORY: Use `lenis` for smooth, premium scrolling physics.",
+    "choreography": "Use `framer-motion`. Staggered entrance for lists, slight parallax on hero images (y: [-20, 20]), and slow editorial marquee (react-fast-marquee).",
+    "interactions": "Hover states must lift (-translate-y-1) and increase shadow depth. Focus states must have high contrast rings.",
+    "rules": "Do NOT use 'transition-all'. Target specific properties (e.g., transition-transform, transition-opacity) to avoid breaking transforms."
+  },
+  "accessibility": {
+    "contrast": "Ensure min 4.5:1 for body text. Use Text Shadow when placing text over cinematic images.",
+    "reduced_motion": "Respect prefers-reduced-motion media query for all framer-motion elements.",
+    "testing": "All interactive elements (buttons, inputs, cards) MUST include a descriptive `data-testid` attribute (e.g., `data-testid=\"hero-cta-button\"`)."
+  },
+  "media": {
+    "rules": "Never use placeholder images. Images must be clipped deliberately (e.g., spotlight masks, raw borders) rather than generic rounded corners everywhere.",
+    "image_urls": {
+      "aviation_hero": {
+        "url": "https://images.unsplash.com/photo-1552773346-ca6976a5d4ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxhaXJwbGFuZSUyMGNvY2twaXQlMjBjaW5lbWF0aWN8ZW58MHx8fHwxNzgzMTc0ODAzfDA&ixlib=rb-4.1.0&q=85",
+        "category": "hero_or_aviation_story",
+        "description": "Cinematic selective focus gear shift lever in cockpit"
+      },
+      "expert_speaker": {
+        "url": "https://images.unsplash.com/photo-1544531586-fde5298cdd40",
+        "category": "expert_showcase",
+        "description": "Man speaking in front of crowd, cinematic lighting"
+      },
+      "microchip_manufacturing": {
+        "url": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0",
+        "category": "explore_field_hardware",
+        "description": "Tilt-shift photography of green computer motherboard"
+      },
+      "startup_founder": {
+        "url": "https://images.pexels.com/photos/12903019/pexels-photo-12903019.jpeg",
+        "category": "expert_profile",
+        "description": "Portrait of a confident young founder in a modern office"
+      },
+      "curious_audience": {
+        "url": "https://images.pexels.com/photos/13595169/pexels-photo-13595169.jpeg",
+        "category": "curiosity_bridge",
+        "description": "Two men deeply engaged in animated conversation outdoors"
+      },
+      "live_audience": {
+        "url": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxsaXZlJTIwYXVkaWVuY2UlMjBjaW5lbWF0aWN8ZW58MHx8fHwxNzg2ODczODQ2fDA&ixlib=rb-4.1.0&q=85",
+        "category": "live_room_preview",
+        "description": "Cinematic shot of people in an audience"
+      }
+    }
+  },
+  "components": {
+    "strategy": "Use Shadcn logic for interactive parts, but STRIP the Vercel-look. Custom HTML/Tailwind for structural storytelling blocks.",
+    "buttons": "Pill-shaped or sharp editorial buttons. Never standard 4px rounded rectangles. Add micro-interactions on hover.",
+    "cards": "Avoid generic 'card grid'. Use bento grids with varying spans, background colors, and typography hierarchies. No equal-height standard grids.",
+    "navigation": "Mobile bottom nav (Home/Live/Explore/Learning) for app feel. Desktop: Glassmorphic sticky header with logo and editorial links."
+  },
+  "sections_breakdown": {
+    "Hero": "Kinetic typography. Line-by-line reveal: 'You've seen the world. / You haven't seen how it works.' Rotating curiosity search input.",
+    "Trust_Strip": "Slow editorial marquee. Serif font. Pale background, dark earthy text.",
+    "Featured_Story": "Aviation editorial. Full-bleed or dramatically clipped image (aviation_hero), large serif quotes.",
+    "Explore_by_Field": "Asymmetrical layout routing to /topic/*. Mix hardware (microchip), business (founder).",
+    "Curiosity_Questions": "Editorial tiles. Text-heavy, poster-like design.",
+    "Expert_Showcase": "Demo profiles featuring expert_speaker and startup_founder.",
+    "Live_Now": "Cards with restrained live-red pulse indicators.",
+    "Starting_Soon": "Reservation flow featuring ₹9 seat booking.",
+    "Why_Live": "Interaction story with scrolling text and sticky image.",
+    "Live_Room_Preview": "Immersive dark section using live_audience image.",
+    "How_It_Works": "Numbered manifesto chapters. Oversized typography numbers (01, 02).",
+    "Knowledge_Journey": "Data visualization styled beautifully (learner stats, Yashraj).",
+    "Curiosity_Bridge": "Discovery path using curious_audience image.",
+    "Footer": "Massive typography. Light mode body means Dark mode footer."
+  },
+  "instructions_to_main_agent": [
+    "You are creating an award-worthy Awwwards Site-of-the-Day experience. Reject standard SaaS templates.",
+    "Implement light and dark themes comprehensively using standard Tailwind dark mode.",
+    "Use framer-motion for kinetic typography and scroll reveals.",
+    "Ensure all text contrasting over images has adequate shadows or gradient overlays.",
+    "Do NOT use HTML <select>. Use customized Shadcn components for forms/inputs.",
+    "Adhere strictly to the spacing scale. Err on the side of too much negative space.",
+    "Ensure every interactive element has a `data-testid` for robust testing.",
+    "Build the mobile bottom nav specifically for small screens.",
+    "DO NOT use completely transparent backgrounds for the sticky header; use backdrop-blur and a semi-transparent color."
+  ]
+}
